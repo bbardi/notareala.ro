@@ -1,0 +1,58 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<html>
+<title>Notă Reală</title>
+<body>
+<h1 class=center id="rand1">Îți aștepți cu nerăbrdare nota?</h2>
+<h1 class=center id="rand2">Vrei să aflii cum îți corectează profii examenul?</h2>
+<h1 class=center id="rand3">Have no fear! Aici îți poți afla nota reală imediat</h2>
+<div class=center><button class=button onclick="getNota()">Află nota</button></div>
+
+</body> 
+</html>
+<script>
+    function getNota(){
+        let feedback = [
+            '0!? Pe bune -.-!? Este un mister cum ai obținut această notă',
+            'Ai copiat!? Ayae ne vedem la admitere',
+            'Chiar nimic vaaai și eu care am dat examen ușor',
+            'Ai mișcat ceva, dar trebuie mai mult',
+            'Hai că ești aproape ne vedem în restanță',
+            'Felicitări, ai trecut. Dar poți mai bine, dar nu cred că vrei să mă mai vezi',
+            'Not great not terrible',
+            'Hai că poți mai mult de șeptar',
+            'Frumoasă notă',
+            'Zecele e al profesorului',
+            'Mi-a făcut plăcere acest semestru',
+        ]
+        var nota = Math.floor(Math.random() * 10);
+        document.getElementById("rand1").innerHTML = "Felicitări ai obținut";
+        document.getElementById("rand2").innerHTML = nota;
+        document.getElementById("rand3").innerHTML = feedback[nota];
+    }
+</script>
+<style>
+.center{
+    text-align: center;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+body {
+    padding: 25px;
+    color: #454545;
+    font-size: 16px;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 1em;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+</style>
