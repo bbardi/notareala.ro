@@ -24,9 +24,22 @@
             'Zecele e al profesorului',
             'Mi-a făcut plăcere acest semestru',
         ]
+        let notaInLetters = [
+            '(zero)',
+            '(unu)',
+            '(doi)',
+            '(trei)',
+            '(patru)',
+            '(cinci)',
+            '(șase)',
+            '(șapte)',
+            '(opt)',
+            '(nouă)',
+            '(zece)',
+        ]
         var nota = Math.floor(Math.random() * 10);
         document.getElementById("rand1").innerHTML = "Felicitări ai obținut";
-        document.getElementById("rand2").innerHTML = nota;
+        document.getElementById("rand2").innerHTML = nota + notaInLetters[nota];
         document.getElementById("rand3").innerHTML = feedback[nota];
     }
 </script>
