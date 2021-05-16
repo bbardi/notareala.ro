@@ -6,6 +6,8 @@
 <h1 class=center id="rand2">Vrei să aflii cum îți corectează profii examenul?</h2>
 <h1 class=center id="rand3">Have no fear! Aici îți poți afla nota reală imediat</h2>
 <div class=center><button class=button onclick="getNota()">Află nota</button></div>
+<br>
+<div class=center><button class=button onclick="darkMode()" id="darkbutton">Întuneric</button></div>
 
 </body> 
 </html>
@@ -42,10 +44,23 @@
         document.getElementById("rand2").innerHTML = nota + notaInLetters[nota];
         document.getElementById("rand3").innerHTML = feedback[nota];
     }
+    function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        var text = document.getElementById("darkbutton");
+        if(text.innerText === "Lumină")
+            text.innerText = "Întuneric";
+        else
+            text.innerText = "Lumină";
+    }
 </script>
 <style>
 .center{
     text-align: center;
+}
+.dark-mode {
+  background-color: black;
+  color: #d9d9d9;
 }
 .button{
     background-color: #4CAF50; /* Green */
@@ -58,6 +73,7 @@
     font-size: 16px;
 }
 body {
+    font-family: Open Sans,Arial;
     padding: 25px;
     color: #454545;
     font-size: 16px;
