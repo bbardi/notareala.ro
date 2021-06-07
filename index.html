@@ -14,6 +14,7 @@
 <script>
     function getNota(){
         let feedback = [
+	    '-1!? Potol yourself',
             '0!? Pe bune -.-!? Este un mister cum ai obținut această notă',
             'Ai copiat!? Ayae ne vedem la admitere',
             'Chiar nimic vaaai și eu care am dat examen ușor',
@@ -27,6 +28,7 @@
             'Mi-a făcut plăcere acest semestru',
         ]
         let notaInLetters = [
+	    '(minus unu)',
             '(zero)',
             '(unu)',
             '(doi)',
@@ -39,9 +41,9 @@
             '(nouă)',
             '(zece)',
         ]
-        var nota = Math.floor(Math.random() * 10);
+        var nota = Math.floor(Math.random() * 11);
         document.getElementById("rand1").innerHTML = "Felicitări ai obținut";
-        document.getElementById("rand2").innerHTML = nota + notaInLetters[nota];
+        document.getElementById("rand2").innerHTML = (nota-1) + notaInLetters[nota];
         document.getElementById("rand3").innerHTML = feedback[nota];
     }
     function darkMode() {
